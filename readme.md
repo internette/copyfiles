@@ -84,6 +84,12 @@ You can use the -e option to exclude some files from the pattern, so to exclude 
 copyfiles -e "**/*.test.js" -f ./foo/**/*.js out
 ```
 
+You can also negate in exclusion through extension glob functions, such as
+
+```bash
+copyfiles -e "!(**/*.min.js)" -f ./foo/**/*.js out
+```
+
 Other options include
 
 - `-a` or `--all` which includes files that start with a dot.
