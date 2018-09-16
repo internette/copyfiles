@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path');
 var fs = require('fs');
-var glob = require('glob');
+var extglob = require('extglob');
 var mkdirp = require('mkdirp');
 var through = require('through2').obj;
 var noms = require('noms').obj;
@@ -89,7 +89,7 @@ function copyFiles(args, config, callback) {
   toStream(input)
   .pipe(through(function (pathName, _, next) {
     var self = this;
-    glob(pathName, globOpts, function (err, paths) {
+    extglob(pathName, globOpts, function (err, paths) {
       if (err) {
         return next(err);
       }

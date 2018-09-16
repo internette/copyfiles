@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "glob": "^7.0.5",
+    "extglob": "^3.0.0",
     "minimatch": "^3.0.3",
     "mkdirp": "^0.5.1",
     "noms": "0.0.0",
